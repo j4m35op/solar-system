@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="favicon.png" />
+    <title>Real 3D Solar System</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        #solar-system {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        
+        #sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            border-radius: 50%;
+            animation: rotate-sun 10s linear infinite;
+        }
+        
+        .planet {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        #mercury {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #bfbfbf;
+            animation: rotate-mercury 4s linear infinite;
+        }
+        
+        #venus {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffcc66;
+            animation: rotate-venus 6s linear infinite;
+        }
+        
+        #earth {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0099ff;
+            animation: rotate-earth 8s linear infinite;
+        }
+        
+        #mars {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff3300;
+            animation: rotate-mars 10s linear infinite;
+        }
+        
+        #jupiter {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff9900;
+            animation: rotate-jupiter 12s linear infinite;
+        }
+        
+        #saturn {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffcc00;
+            animation: rotate-saturn 14s linear infinite;
+        }
+        
+        #uranus {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #66ccff;
+            animation: rotate-uranus 16s linear infinite;
+        }
+        
+        #neptune {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0000ff;
+            animation: rotate-neptune 18s linear infinite;
+        }
+        
+        @keyframes rotate-sun {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        
+        @keyframes rotate-mercury {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(100px);
+            }
+        }
+        
+        @keyframes rotate-venus {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+            }
+        }
+        
+        @keyframes rotate-earth {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(200px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(200px);
+            }
+        }
+        
+        @keyframes rotate-mars {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(250px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(250px);
+            }
+        }
+        
+        @keyframes rotate-jupiter {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(300px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(300px);
+            }
+        }
+        
+        @keyframes rotate-saturn {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(350px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(350px);
+            }
+        }
+        
+        @keyframes rotate-uranus {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(400px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(400px);
+            }
+        }
+        
+        @keyframes rotate-neptune {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(450px);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(450px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="solar-system">
+        <div id="sun"></div>
+        <div id="mercury" class="planet"></div>
+        <div id="venus" class="planet"></div>
+        <div id="earth" class="planet"></div>
+        <div id="mars" class="planet"></div>
+        <div id="jupiter" class="planet"></div>
+        <div id="saturn" class="planet"></div>
+        <div id="uranus" class="planet"></div>
+        <div id="neptune" class="planet"></div>
+    </div>
+</body>
+</html>
